@@ -1,0 +1,13 @@
+const express = require('express');
+const TaskController = require('../controladores/funciones');
+
+const router = express.Router();
+
+router.get('/tasks', funciones.inicio);
+router.get('/crear', funciones.create);
+router.post('/crear', funciones.store);
+router.post('/tasks/delete', funciones.destroy);
+router.get('/tasks/editar/:id', funciones.edit);
+router.post('/tasks/editar/:id', funciones.update);
+
+module.exports = router;
